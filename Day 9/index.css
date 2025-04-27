@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    background: #1F1F1F;
+    color: white;
+    
+}
+a{
+    color: wheat;
+}
+.media{
+    border: 1px solid gray;
+    width: 300px;
+    border-radius: 30px;
+    padding: 30px;
+    text-align: center;
+    line-height: 2;
+    position: fixed;
+    top: 50px;
+    left: 40px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image img{
+    
+    border-radius:30px;
+
+}
+
+.right{
+    font-size: smaller;
+    color: rgb(143, 151, 157);
+    row-gap:20px 30px;
+   
+}
+ul{
+    margin-left:0 ;
+    display: flex;
+    justify-content: space-around;
+    list-style-type:none;  
+}
+button{
+    border-radius: 20px;
+    padding: 10px 50px;
+    background: #28E98C;
+    width: 100%;
+    border: 2px solid white;
+}
+.menu{
+    border: 1px solid gray;
+    border-radius: 20px;
+    width: 30px;
+    text-align: center;
+    line-height: 2;
+    padding: 10px 5px;
+    position: fixed;
+    right: 121px;
+    top: 150px;
+}
+ol{
+    list-style: none; 
+}
+.herosection{
+
+width: 650px;
+text-align: center;
+line-height: 2;
+padding: 10px 10px;
+position: absolute;
+left: 580px;
+top: 50px;
+
+}
+.headerr{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 45rem;
+    
+
+}
+.headerr h4{
+    border: 1px solid gray;
+    padding: 0.5rem 0.9rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1rem;
+}
+
+.headerr button{
+    background:black;
+    border: 2px solid gray;
+    border-radius: 2rem;
+   
+}
+.bodyy h1{
+    font-size: 4rem;
+}
+.right p{
+    font-size:1.5rem;
+}
+.year
+{
+    display: flex;
+    justify-content: space-between;
+    row-gap: 500px;
+}
+.year p{
+    font-size: 5rem;
+}
+.year span{
+    color: gray;
+    font-size: 1.3rem;
+    line-height: 2;
+}
+.about{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.aboutbody h1{
+    font-size: 3rem;
+}
+.aboutbody p{
+    color: gray;
+    font-size:1rem ;
+}

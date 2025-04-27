@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow</title>
+
+    <style>
+        
+        .box{
+
+            width: 500px;
+            height: 240px;
+            border: 2px solid grey;
+            border-radius: 45px;
+            position: relative;
+            
+        }
+        .boxes{
+            display: flex;
+            justify-content: space-around;
+        }
+        h2{
+            text-align: center;
+        }
+        #box1{
+            height: 100px;
+            width: 100px;
+            
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px 2px gray;           
+        }
+        #box2{
+            height: 100px;
+            width: 100px;
+            
+            border-radius: 20px;
+            box-shadow:inset 0px 0px 14px 2px gray;
+        }
+        #box3{
+            height: 100px;
+            width: 100px; 
+            border: 1px solid; 
+            border-radius: 20px;
+            box-shadow:2px 2px 0px 1px  #f8ededad, 3px 3px 0px 2px rgb(166, 157, 157), 4px 4px 0px 3px #3c3a3a ;
+        }
+        .turing{
+            margin-top: 20px;
+            position: absolute;
+            right: 0;
+            margin-right: 20px;
+        }
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="box">
+
+        <h2>CSS Box Shadow Example</h2>
+        <div class="boxes">
+        <div class="child" id="box1">  </div>
+        <div class="child" id="box2">  </div>
+        <div class="child" id="box3">  </div>
+        </div>
+        <div class="turing"><b>Turing</b></div>
+
+
+    </div>
+
+
+</body>
+</html>
