@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent{
+
+            border: 2px solid red;
+            height: 600px;
+            width:600px;
+        }
+
+        .movebox{
+            height: 120px;
+            width: 120px;
+            background-color: rebeccapurple;
+            border-radius: 2rem;
+            animation-name: movebox;
+            position: relative;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes movebox {
+        0%{
+
+            background-color: aqua;
+            top: 0;
+            left: 0;
+        } 
+        25%{
+
+            background-color: green;
+            top: 0;
+            left: 480px;
+        }
+        50%{
+
+            background-color: green;
+            top: 480px;
+            left: 480px;
+        }
+        75%{
+
+            background-color: rgb(193, 48, 4);
+            top: 480px;
+            left: 0px;
+        }
+        100%{
+
+            background-color: green;
+            top: 0;
+            left:0;
+            
+        }
+        
+        }
+        </style>
+
+</head>
+<body>
+    <div class="parent">
+        <div class="movebox"></div>
+
+    </div>
+</body>
+</html>

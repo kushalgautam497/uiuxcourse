@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font awsome link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<!-- google font link -->
+<link
+    href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+    rel="stylesheet" />
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        background-color: #1F1F1F;
+        color: white;
+        font-family: 'Inter';
+        
+    }
+    .Contact{
+        padding: 50px 50px;
+        width: 770px;
+    }
+    input{
+        border: none;
+    }
+    .header{
+        border-radius: 1px solid red;
+    }
+    .header h4{
+        border: 1.5px solid ;
+        border-radius: 2rem;
+        padding: 10px 10px;
+    }
+    button{
+        border: 1.5px ;
+        margin-bottom: 2rem;
+    }
+    h3{
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+    #colour{
+        color: #28E98C;
+    }
+    p{
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+    }
+    .namemail{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        width: 100%;
+
+    }
+    .phonesubject{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+    }
+    .budget{
+        margin-bottom: 2rem; 
+    }
+    .message{
+        margin-bottom: 2rem;
+    }
+    .file
+    {
+        margin-bottom: 2rem;
+    }
+    .sendmessage button{
+        border: 1px solid #28E98C ;
+        border-radius: 2rem;
+        background-color: #28E98C;
+        color: #1F1F1F;
+        padding: 15px 20px;
+        cursor: pointer;
+        
+    }
+    .sendmessage button:hover{
+        background-color: #1F1F1F;
+        color: #28E98C;
+    }
+</style>
+
+</head>
+<body>
+    
+
+   
+
+        <div class="Contact">
+            <div class="header">
+                <button><h4><i class="fa-regular fa-envelope"></i> <small> CONTACT</small></h4></button>
+    
+            </div>
+            <div class="body">
+                <h3>Let's Work <span id="colour">Together !</span></h3>
+                <p>hello@drake.design</p>  
+            </div>
+            <div class="namemail">
+                <div class="name">
+                    <form action="">
+                    <label for="">Full Name*</label><br>
+                    <input type="text" name="FullName" id="FullName" placeholder="YOUR FULL NAME" required>
+                    </form>
+                </div>
+                <div class="email">
+                    <form action="">
+                        <label for="">Email*</label><br>
+                        <input type="email" name="email" id="email" placeholder="Your Email Address" required>
+                    </form>
+                </div>
+            </div>
+            <div class="phonesubject">
+                <div class="phone">
+                    <form action="">
+                        <label for="">Phone </label><br>
+                        <input type="number" name="number" id="number" placeholder="Your Phone number">
+                </div>
+
+                <div class="subject">
+                    <label for="">Subject*</label><br>
+                    <select name="Subject" id="Subject">
+                        <option value="Subject 1">Subject 1</option>
+                        <option value="Subject 2">Subject 2</option>
+                        <option value="Subject 3">Subject 3</option>
+                        <option value="Subject 4">Subject 4</option>
+                    </select>
+                </div>
+                
+            </div>
+            <div class="budget">
+                <label for="">Your Budget</label><br>
+                <input type="number" name="number" id="number" placeholder="A Range Budget For Your Project">
+            </div>
+            <div class="message">
+                <label for="">Message</label><br>
+                <textarea name="" id="" cols="35" rows="3"></textarea>
+            </div>
+            <div class="file">
+                <label for="">Add An Attachment</label><br>
+                <input type="file" name="file" id="file" max="500kb">
+            </div>
+            <div class="sendmessage">
+                <button>
+                    SEND MESSAGE
+                </button>
+            </div>
+        </div>
+
+
+
+</body>
+</html>

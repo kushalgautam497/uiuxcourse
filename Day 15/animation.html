@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .movebox{
+            height: 120px;
+            width: 120px;
+            background-color: rebeccapurple;
+            border-radius: 2rem;
+            animation-name: movebox;
+
+            /* transition: all 2s; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+
+
+            position: relative;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        /* .movebox:hover{
+            margin-top: 200px;
+            cursor: pointer;
+        } */
+        @keyframes movebox {
+        from{
+
+            background-color: aqua;
+            top: 0;;
+        } 
+        to{
+
+            background-color: green;
+            top: 200px;
+        }
+        
+        }
+    </style>
+
+</head>
+<body>
+    <div class="movebox"></div>
+</body>
+</html>
