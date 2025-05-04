@@ -5,6 +5,13 @@
     color: #FFFFFF;
     font-family:Inter ;
 }
+.container{
+    display: flex;
+}
+/* left container :start */
+.leftcontainer{
+    margin-top: 50px;
+}
 .media{
     border: 1px solid #565656;
     border-radius: 20px;
@@ -12,21 +19,28 @@
     text-align: center;
     padding: 30px;
 }
-.header{
+.top{
     display: flex;
     justify-content: space-between;
-    align-items: center;   
+    align-items: center; 
+    margin-bottom: 20px;  
 }
 .image img{
     border-radius: 20px;
     margin-bottom: 20px;
 }
+.text{
+    margin-bottom: 10px;
+}
 p{
-    font-size: 16px;
+    font-size: 18px;
 }
 span{
     color: gray;
-    font-size: 12px;
+    font-size: 15px;
+}
+.right{
+    margin-bottom: 10px;
 }
 ul{
     display: flex;
@@ -34,6 +48,8 @@ ul{
     list-style: none;
     margin-bottom: 20px;
 }
+
+
 button{
     border-radius: 20px;
     padding: 10px 50px;
@@ -49,31 +65,260 @@ button:hover{
     color: #28E98C;
 
 }
-/* .leftslidebar{
+/* left container :end */
+/* main container :start */
+
+
+    .maincontainer
+    {
+        width: 770px;
+        margin: 60px;
+
+    }
+    /* INTERODUCE   */
+    .INTERODUCE{
+        margin-bottom: 50px;
+    } 
+    .header{
+        display: inline-block; 
+        color: white;
+        border: 1px solid gray;
+        border-radius: 3rem;
+        padding:10px 10px ;
+        font-size:12px;
+        column-gap: 10px;
+        margin-bottom: 30px;
+    }
+    h3{
+        font-size: 3rem;
+    margin-bottom: 2.5rem;
+    }
+    .colour{
+        color: #28E98C;
+        font-size: 3rem;
+    }
+    .rotate{
+        position: relative;
+        left: 600px;
+        animation-name: rotateimage;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes rotateimage {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+        
+    }
+    .year p{
+        font-size: 3rem;
+        color: #28E98C;
+    }
+    .year{
+        display: flex;
+        column-gap: 5rem;
+
+    }
+
+
+    /* about */
+    .ABOUT{
+        margin-bottom: 50px;
+    }
+    /* RESUME */
+    .RESUME{
+        margin-bottom: 50px;
+    }
+    /* SERVICE */
+    .SERVICE{
+        margin-bottom: 50px;
+    }
+    .projectbody
+    {
+        display: grid;
+        row-gap: 10px;
+    }
+    .project1  {
+        border: 2px solid #757272;
+        padding: 2rem;
+        border-radius: 50px;
+    }
+    .project1:hover{
+        border:2px solid #28E98C;
+    }
+    
+    .project2  {
+        border: 2px solid #757272;
+        padding: 2rem;
+        border-radius: 50px;
+    }
+    .project2:hover{
+        border:2px solid #28E98C;
+    }
+    .project3  {
+        border: 2px solid #757272;
+        padding: 2rem;
+        border-radius: 50px;
+    }
+    .project3:hover{
+        border:2px solid #28E98C;
+    }
+    h4{
+        font-size: 2.5rem;
+        margin-bottom:20px ;
+    
+    }
+    .project{
+        margin-top: 20px;
+    }
+    /* SKILL */
+    .SKILL{
+        margin-bottom: 50px;
+    }
+    .skills{
+        display: grid;
+        justify-items: center;
+        
+        grid-template-columns:repeat(4, auto);
+        row-gap: 2rem;
+        text-align: center;
+    
+    }
+    .logo{
+        display:-moz-stack;
+        border: 1px solid #494949;
+        border-radius: 20px;
+        padding: 20px 40px;
+        border-radius: 50;
+        text-align: center;
+        margin: 20px;
+        
+        
+    }
+    .logo img{
+        width:70px;
+        height: 70px;
+    }
+    /* PRICING */
+    .PRICING{
+        margin-bottom: 50px;
+    }
+    .card{
+        display: flex;
+        column-gap: 10px;
+    }
+    .card1{
+        border: 1px solid #565656;
+        border-radius: 20px;
+        padding: 30px 30px;
+        width: 320px;
+    }
+    .card2{
+        border: 1px solid #565656;
+        border-radius: 20px;
+        padding: 30px 30px;
+        width: 320px;
+    }
+    .cardtop{
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     align-items: center; 
+      
+    }
+    .cardtop span{
+        font-size: 12px;
+    }
+    .price{
+        display: flex;
+        column-gap: 10px;
+        justify-content: baseline;
+        margin-bottom: 30px;
+    }
+    .price p{
+        font-size: 30px;
+    }
+    .package{
+        margin-top: 30px;
+        
+    }
+    .card ol{
+        line-height: 30px;
+    }
+    
+    /* CONTACT */
+    .CONTACT
+    
+    .header h4{
+        border: 1.5px solid ;
+        border-radius: 2rem;
+        padding: 10px 10px;
+    }
+    
+    input{
+        border: none;
+    }
+    
+    .namemail{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        width: 100%;
+    
+    }
+    .phonesubject{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    
+    }
+    .budget{
+        margin-bottom: 2rem; 
+    }
+    .message{
+        margin-bottom: 2rem;
+    }
+    .file
+    {
+        margin-bottom: 2rem;
+    }
+    .sendmessage button{
+        border: 1px solid #28E98C ;
+        border-radius: 2rem;
+        background-color: #28E98C;
+        color: #1F1F1F;
+        padding: 15px 20px;
+        cursor: pointer;
+        width: 250px;
+        
+    }
+    .sendmessage button:hover{
+        background-color: #1F1F1F;
+        color: #28E98C;
+    }
+/* main container :end */
+/* right container :start */
+.rightcontainer{
+width: 30px;
+}
+.menu{
+    border: 1px solid gray;
+    border-radius: 20px;
     text-align: center;
-    border-radius: 50px;
-    line-height:1.7rem;
-    padding: 30px;
-    top: 80px;
-    left: 80px;
+    line-height: 2;
+    padding: 10px 10px;
     position: fixed;
-
+    right: 121px;
+    top: 150px;
 }
-.top{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
+ol{
+    list-style: none; 
 }
-
-.details{
-    font-weight: 100;
-    margin-bottom: 20px;
+ol:hover{
+    color: #28E98C;
 }
-
-.address{
-    margin-bottom: 20px;
-}
-
-}
- */
+/* right container :end */
