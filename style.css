@@ -203,6 +203,161 @@ button:hover{
         width:70px;
         height: 70px;
     }
+
+    /* PORTFOLIO */
+    .portfolio_img1,.portfolio_img2,.portfolio_img3{
+        margin-bottom: 50px;
+    }
+    .features_Project{
+        background-image: url('https://wpriverthemes.com/drake/wp-content/uploads/2023/03/portfolio1.jpg');
+        color: white;
+        border-radius: 2rem;
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex; /* added */
+        align-items: flex-end; /* better alignment for content at bottom */
+        padding: 1rem;
+        margin-bottom:  20px; ; /* added spacing inside */
+    }
+    .features_Project ul{
+        display: flex;
+        justify-content: flex-start;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .features_Project li{      
+        background-color: white;
+        padding: 10px 1rem;
+        border-radius: 2rem;
+        color: black;
+        font-weight: bold;
+    }
+
+    .features_Project2{
+        background-image: url('https://wpriverthemes.com/drake/wp-content/uploads/2023/03/portfolio5.jpg');
+        color: white;
+        border-radius: 2rem;
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex; /* added */
+        align-items: flex-end; /* better alignment for content at bottom */
+        padding: 1rem;
+        margin-bottom:  20px; ; /* added spacing inside */
+    }
+    .features_Project2 ul{
+        display: flex;
+        justify-content: flex-start;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .features_Project2 li{      
+        background-color: white;
+        padding: 10px 1rem;
+        border-radius: 2rem;
+        color: black;
+        font-weight: bold;
+    }
+    
+    .features_Project3{
+        background-image: url('https://wpriverthemes.com/drake/wp-content/uploads/2023/03/portfolio4.jpg');
+        color: white;
+        border-radius: 2rem;
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex; /* added */
+        align-items: flex-end; /* better alignment for content at bottom */
+        padding: 1rem;
+        margin-bottom:  20px; ; /* added spacing inside */
+    }
+    .features_Project3 ul{
+        display: flex;
+        justify-content: flex-start;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .features_Project3 li{      
+        background-color: white;
+        padding: 10px 1rem;
+        border-radius: 2rem;
+        color: black;
+        font-weight: bold;
+    }
+    .imgportfolio2{
+        display: flex;
+        justify-content: space-between;
+
+
+    }
+    .features_Project4{
+        background-image: url('https://wpriverthemes.com/drake/wp-content/uploads/2023/03/portfolio2.jpg');
+        color: white;
+        border-radius: 2rem;
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex; /* added */
+        align-items: flex-end; /* better alignment for content at bottom */
+        padding: 1rem;
+        margin-bottom:  20px; /* added spacing inside */
+        width: 330px;
+    }
+
+    .features_Project4 ul{
+        display: flex;
+        justify-content: flex-start;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .features_Project4 li{      
+        background-color: white;
+        padding: 10px 1rem;
+        border-radius: 2rem;
+        color: black;
+        font-weight: bold;
+    }
+    .features_Project5{
+        background-image: url('  https://wpriverthemes.com/drake/wp-content/uploads/2023/03/portfolio3.jpg');
+        color: white;
+        position: center;
+        border-radius: 2rem;
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex; /* added */
+        align-items: flex-end; /* better alignment for content at bottom */
+        padding: 1rem;
+        margin-bottom:  20px;  /* added spacing inside */
+        width:330px ;
+    }
+    .features_Project5 ul{
+        display: flex;
+        justify-content: flex-start;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .features_Project5 li{      
+        background-color: white;
+        padding: 10px 1rem;
+        border-radius: 2rem;
+        color: black;
+        font-weight: bold;
+    }
+
+
+
     /* PRICING */
     .PRICING{
         margin-bottom: 50px;
