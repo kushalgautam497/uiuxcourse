@@ -9,15 +9,33 @@
     
 </body>
 <script>
-    document.write("this is js class"); 
-    
-    let ans = prompt("how are you")
+    let A = prompt("FIRST NUMBER");
+    let B = prompt("SECOND NUMBER");
+    let op = prompt("Select operator (+, -, *, /)");
 
-    alert(" respond is " + ans);
-    let resp = confirm("are you sure");
-    alert ("respond is "+resp);
-    //get the object
-    let pa = document.getElementById("myparagraph");
-    pa.innerHTML="<b> this is from js</b>"
+    let x = parseFloat(A);
+    let y = parseFloat(B);
+    let Result;
+
+    switch (op) {
+        case "+":
+            Result = x + y;
+            break;
+        case "-":
+            Result = x - y;
+            break;
+        case "*":
+            Result = x * y;
+            break;
+        case "/":
+            Result = (y !== 0) ? x / y : "Error: Division by zero";
+            break;
+        default:
+            Result = "Invalid operation";
+    }
+
+    document.write("Result is " + Result);
+    let resp = confirm("Do you want to add more?");
 </script>
+
 </html>
