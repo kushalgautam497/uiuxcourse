@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +17,9 @@
             --text-color: #333;
             --bg-color: #ffffff;
             --card-bg: #f8f9fa;
-            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
+            --header-height: 80px;
         }
 
         .dark-mode {
@@ -29,7 +31,7 @@
             --text-color: #f8f9fa;
             --bg-color: #121212;
             --card-bg: #1e1e1e;
-            --shadow: 0 5px 15px rgba(0,0,0,0.4);
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
         }
 
         /* Base Styles */
@@ -102,7 +104,7 @@
             background: var(--secondary-color);
             color: white;
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .btn-outline {
@@ -144,6 +146,9 @@
             background: rgba(255, 255, 255, 0.95);
             box-shadow: var(--shadow);
             transition: var(--transition);
+            height: var(--header-height);
+            display: flex;
+            align-items: center;
         }
 
         .dark-mode header {
@@ -154,7 +159,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            width: 100%;
         }
 
         .logo {
@@ -216,11 +221,13 @@
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
+            color: var(--text-color);
         }
 
         /* Hero Section */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
+            padding-top: var(--header-height);
             display: flex;
             align-items: center;
             background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(63, 55, 201, 0.05) 100%);
@@ -246,6 +253,7 @@
             align-items: center;
             gap: 50px;
             width: 100%;
+            padding: 40px 0;
         }
 
         .hero-text {
@@ -265,7 +273,6 @@
             overflow: hidden;
             border: 5px solid var(--primary-color);
             box-shadow: var(--shadow);
-            position: relative;
         }
 
         .profile-img img {
@@ -323,6 +330,8 @@
 
         .about-image img {
             transition: var(--transition);
+            display: block;
+            width: 100%;
         }
 
         .about-image:hover img {
@@ -374,7 +383,7 @@
 
         .skill-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .skill-icon {
@@ -393,6 +402,19 @@
             background-color: var(--bg-color);
         }
 
+        .projects-sub-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .projects-sub-title-upcoming {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -405,11 +427,13 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
 
         .project-img {
@@ -418,7 +442,7 @@
             position: relative;
         }
 
-        .project-img .status-badge {
+        .status-badge {
             position: absolute;
             top: 15px;
             right: 15px;
@@ -428,6 +452,11 @@
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 600;
+            z-index: 1;
+        }
+
+        .status-badge.upcoming {
+            background: #f77f00;
         }
 
         .project-img img {
@@ -443,6 +472,9 @@
 
         .project-info {
             padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
 
         .project-info h3 {
@@ -453,6 +485,7 @@
         .project-info p {
             margin-bottom: 15px;
             color: var(--text-color);
+            flex: 1;
         }
 
         .project-tags {
@@ -503,6 +536,7 @@
             align-items: center;
             justify-content: center;
             font-size: 1.2rem;
+            flex-shrink: 0;
         }
 
         .contact-text h4 {
@@ -597,26 +631,26 @@
             .hero h1 {
                 font-size: 3rem;
             }
-            
+
             .about-content {
                 flex-direction: column;
             }
-            
+
             .hero-content {
                 flex-direction: column-reverse;
                 text-align: center;
             }
-            
+
             .hero-text {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .hero p {
                 max-width: 100%;
             }
-            
+
             .profile-img {
                 width: 250px;
                 height: 250px;
@@ -624,38 +658,59 @@
         }
 
         @media (max-width: 768px) {
+            :root {
+                --header-height: 70px;
+            }
+
             .nav-links {
                 display: none;
             }
-            
+
             .mobile-menu {
                 display: block;
             }
-            
+
+            .hero {
+                min-height: 100vh;
+                height: auto;
+                padding-top: var(--header-height);
+                padding-bottom: 40px;
+                align-items: flex-start;
+            }
+
+            .hero-content {
+                padding-top: 30px;
+            }
+
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .hero .title {
                 font-size: 1.3rem;
             }
-            
+
             .hero-btns {
                 justify-content: center;
             }
-            
+
             .btn {
                 width: 100%;
                 text-align: center;
             }
-            
+
             .skills-grid {
                 grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
                 gap: 15px;
             }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Header & Navigation -->
     <header>
@@ -685,7 +740,8 @@
                 <div class="hero-text">
                     <h1>Kushal Gautam</h1>
                     <span class="title">UI/UX Designer & Developer</span>
-                    <p>I create meaningful digital experiences through thoughtful design, user research, and innovative solutions. Passionate about crafting interfaces that are both beautiful and functional.</p>
+                    <p>I create meaningful digital experiences through thoughtful design, user research, and innovative
+                        solutions. Passionate about crafting interfaces that are both beautiful and functional.</p>
                     <div class="hero-btns">
                         <a href="#projects" class="btn">View My Work</a>
                         <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -709,10 +765,14 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hello! I'm Kushal Gautam, a UI/UX designer passionate about crafting user-friendly and visually engaging digital experiences. I specialize in user research, wireframing, and creating intuitive interfaces.</p>
-<p>My design approach focuses on empathy and solving real user problems through thoughtful, meaningful design.</p>
-<p>Outside of work, I enjoy sketching, exploring new design tools, and finding inspiration in nature.</p>
- 
+                    <p>Hello! I'm Kushal Gautam, a UI/UX designer passionate about crafting user-friendly and visually
+                        engaging digital experiences. I specialize in user research, wireframing, and creating intuitive
+                        interfaces.</p>
+                    <p>My design approach focuses on empathy and solving real user problems through thoughtful,
+                        meaningful design.</p>
+                    <p>Outside of work, I enjoy sketching, exploring new design tools, and finding inspiration in
+                        nature.</p>
+
                     <div class="skills-section">
                         <!-- Design Skills -->
                         <div class="skill-category">
@@ -724,12 +784,6 @@
                                     </div>
                                     <div class="skill-name">Figma</div>
                                 </div>
-                                <!-- <div class="skill-item">
-                                    <div class="skill-icon">
-                                        <i class="fab fa-adobe"></i>
-                                    </div>
-                                    <div class="skill-name">Adobe XD</div>
-                                </div> -->
                                 <div class="skill-item">
                                     <div class="skill-icon">
                                         <i class="fas fa-pen-nib"></i>
@@ -742,9 +796,15 @@
                                     </div>
                                     <div class="skill-name">Photoshop</div>
                                 </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <div class="skill-name">InDesign</div>
+                                </div>
                             </div>
                         </div>
-                        
+
                         <!-- Development Skills -->
                         <div class="skill-category">
                             <h3>Development Skills</h3>
@@ -769,7 +829,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Tools -->
                         <div class="skill-category">
                             <h3>Tools</h3>
@@ -797,7 +857,8 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Design Process">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+                        alt="Design Process">
                 </div>
             </div>
         </div>
@@ -807,8 +868,8 @@
     <section class="projects" id="projects">
         <div class="container">
             <h2 class="section-title">My Projects</h2>
-            
-            <h3 style="text-align: center; margin-bottom: 30px; color: var(--primary-color);">Featured Work</h3>
+
+            <h3 class="projects-sub-title">Featured Work</h3>
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
@@ -818,7 +879,8 @@
                     </div>
                     <div class="project-info">
                         <h3>Finance Dashboard</h3>
-                        <p>A comprehensive financial dashboard that helps users track expenses, investments, and savings goals with intuitive data visualization.</p>
+                        <p>A comprehensive financial dashboard that helps users track expenses, investments, and savings
+                            goals with intuitive data visualization.</p>
                         <div class="project-tags">
                             <span class="tag">UI Design</span>
                             <span class="tag">Dashboard</span>
@@ -827,7 +889,7 @@
                         <a href="#" class="btn btn-outline">View Case Study</a>
                     </div>
                 </div>
-                
+
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-img">
@@ -836,7 +898,8 @@
                     </div>
                     <div class="project-info">
                         <h3>E-commerce Mobile App</h3>
-                        <p>Redesigned shopping experience for a fashion retailer, resulting in a 30% increase in mobile conversions.</p>
+                        <p>Redesigned shopping experience for a fashion retailer, resulting in a 30% increase in mobile
+                            conversions.</p>
                         <div class="project-tags">
                             <span class="tag">Mobile App</span>
                             <span class="tag">E-commerce</span>
@@ -845,16 +908,17 @@
                         <a href="#" class="btn btn-outline">View Case Study</a>
                     </div>
                 </div>
-                
+
                 <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-img">
                         <span class="status-badge">Completed</span>
-                        <img src="MoM's Cafe.jpg" alt="Health App">
+                        <img src="MoM's Cafe.jpg" alt="MoM's Cafe">
                     </div>
                     <div class="project-info">
                         <h3>MoM's Cafe</h3>
-                        <p>An all-in-one wellness app that helps users track nutrition, workouts, and mental health with personalized insights.</p>
+                        <p>An all-in-one wellness app that helps users track nutrition, workouts, and mental health with
+                            personalized insights.</p>
                         <div class="project-tags">
                             <span class="tag">Health Tech</span>
                             <span class="tag">Mobile Design</span>
@@ -864,18 +928,20 @@
                     </div>
                 </div>
             </div>
-            
-            <h3 style="text-align: center; margin: 50px 0 30px; color: var(--primary-color);">Upcoming Projects</h3>
+
+            <h3 class="projects-sub-title-upcoming">Upcoming Projects</h3>
             <div class="projects-grid">
                 <!-- Upcoming Project 1 -->
                 <div class="project-card">
                     <div class="project-img">
-                        <span class="status-badge">Upcoming</span>
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Travel App">
+                        <span class="status-badge upcoming">Upcoming</span>
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                            alt="Travel App">
                     </div>
                     <div class="project-info">
                         <h3>Travel Planning Platform</h3>
-                        <p>End-to-end design for a travel app that simplifies itinerary planning with AI-powered recommendations.</p>
+                        <p>End-to-end design for a travel app that simplifies itinerary planning with AI-powered
+                            recommendations.</p>
                         <div class="project-tags">
                             <span class="tag">Travel</span>
                             <span class="tag">Web App</span>
@@ -884,12 +950,13 @@
                         <a href="#" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
-                
+
                 <!-- Upcoming Project 2 -->
                 <div class="project-card">
                     <div class="project-img">
-                        <span class="status-badge">Upcoming</span>
-                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Education Platform">
+                        <span class="status-badge upcoming">Upcoming</span>
+                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80"
+                            alt="Education Platform">
                     </div>
                     <div class="project-info">
                         <h3>E-Learning Platform</h3>
@@ -902,25 +969,7 @@
                         <a href="#" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
-                
-                <!-- Upcoming Project 3 -->
-                <!-- <div class="project-card">
-                    <div class="project-img">
-                        <span class="status-badge">Upcoming</span>
-                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Smart Home App">
-                    </div>
-                    <div class="project-info">
-                        <h3>Smart Home Control</h3>
-                        <p>Mobile app for controlling smart home devices with intuitive interface and automation features.</p>
-                        <div class="project-tags">
-                            <span class="tag">IoT</span>
-                            <span class="tag">Mobile App</span>
-                            <span class="tag">UI Design</span>
-                        </div>
-                        <a href="#" class="btn btn-outline">Learn More</a>
-                    </div>
-                </div> -->
-            </div> 
+            </div>
         </div>
     </section>
 
@@ -936,10 +985,10 @@
                         </div>
                         <div class="contact-text">
                             <h4>Email</h4>
-                            <a href="mailto:kushalgautam497@gmail.com">infogautamkushal@gmail.com</a>
+                            <a href="mailto:infogautamkushal@gmail.com">infogautamkushal@gmail.com</a>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
@@ -949,7 +998,7 @@
                             <p>Kathmandu, Nepal</p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-share-alt"></i>
@@ -964,13 +1013,13 @@
                                     <i class="fab fa-instagram"></i>
                                 </a>
                                 <a href="https://www.behance.net/kushalgautam1" target="_blank" title="Behance">
-                                     <i class="fab fa-behance"></i>
+                                    <i class="fab fa-behance"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="contact-form">
                     <form>
                         <div class="form-group">
@@ -1011,13 +1060,13 @@
 
     <!-- Theme Toggle Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const themeToggle = document.getElementById('theme-toggle');
             const themeIcon = themeToggle.querySelector('i');
-            
-            themeToggle.addEventListener('click', function() {
+
+            themeToggle.addEventListener('click', function () {
                 document.body.classList.toggle('dark-mode');
-                
+
                 if (document.body.classList.contains('dark-mode')) {
                     themeIcon.classList.remove('fa-moon');
                     themeIcon.classList.add('fa-sun');
@@ -1029,3 +1078,5 @@
         });
     </script>
 </body>
+
+</html>
