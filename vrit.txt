@@ -1,0 +1,13 @@
+Task 1
+https://www.figma.com/design/WsADHF5vMPtb5akOZbmEge/VRIT?node-id=0-1&t=PgmblOh3Ftadd6ef-1
+
+Task 2
+Question 1
+
+The simplest way to solve this is by sending Saugat a secure, one-time review link via email or SMS once his application reaches a key stage like visa approval, either automatically or triggered by the counsellor. This link contains a unique, time-limited token tied to his application, so when he clicks it, he can access a short, mobile-friendly review form without needing to log in. His identity is verified through the link itself (and optionally a small check like phone digits), and the token expires after one use to prevent misuse or fake submissions. Once submitted, the review is stored in the CRM where admins can view, filter, approve, or reject it, and also analyze feedback for counsellor performance and overall service quality.
+
+
+Question 3
+I’d prevent notification spam by adding a short delay (1–2 minutes) so multiple quick status changes are combined into one final update, instead of sending emails for every click. Only important milestones (like Offer, COE, Visa Granted) should trigger notifications, while minor corrections stay silent. If a status is reverted, send a clear “status corrected” message or require manual confirmation before notifying. For bulk updates, send one summary per student rather than multiple alerts. For SMS and WhatsApp, limit messages to only high-priority updates to avoid overwhelming the student.
+
+
